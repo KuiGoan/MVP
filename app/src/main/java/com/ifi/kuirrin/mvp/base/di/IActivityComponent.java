@@ -1,10 +1,6 @@
 package com.ifi.kuirrin.mvp.base.di;
 
-import com.ifi.kuirrin.mvp.MainActivity;
-
-import javax.inject.Singleton;
-
-import dagger.Component;
+import com.ifi.kuirrin.mvp.home.MainActivity;
 
 /**
  * Created by ddquy on 7/14/2017.

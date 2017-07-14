@@ -1,4 +1,4 @@
-package com.ifi.kuirrin.mvp;
+package com.ifi.kuirrin.mvp.home;
 
 import com.ifi.kuirrin.mvp.base.BasePresenter;
 

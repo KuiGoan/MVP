@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/activity_main"
-    tools:context="com.ifi.kuirrin.mvp.MainActivity">
+    tools:context="com.ifi.kuirrin.mvp.home.MainActivity">
 
     <TextView
         android:id="@+id/tvHello"

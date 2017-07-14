@@ -2,8 +2,8 @@ package com.ifi.kuirrin.mvp.base.di;
 
 import android.content.Context;
 
-import com.ifi.kuirrin.mvp.IMainContract;
-import com.ifi.kuirrin.mvp.MainPresenter;
+import com.ifi.kuirrin.mvp.home.IMainContract;
+import com.ifi.kuirrin.mvp.home.MainPresenter;
 
 //import javax.inject.Singleton;
 //
