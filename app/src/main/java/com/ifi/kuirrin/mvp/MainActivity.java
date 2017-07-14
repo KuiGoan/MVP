@@ -8,10 +8,19 @@ import android.widget.TextView;
 
 import com.ifi.kuirrin.mvp.base.BaseActivity;
 
+import butterknife.BindView;
+//import butterknife.ButterKnife;
+//import butterknife.OnClick;
+//import butterknife.OnItemClick;
+
 public class MainActivity extends BaseActivity implements IMainContract.View, View.OnClickListener {
 
-    private TextView mTextHello;
-    private Button mBtClick;
+    @BindView(R.id.tvHello)
+    TextView mTvHello;
+    @BindView(R.id.btClick)
+    Button mBtClick;
+//    private TextView mTextHello;
+//    private Button mBtClick;
 
     private MainPresenter mMainPresenter;
 
@@ -22,11 +31,12 @@ public class MainActivity extends BaseActivity implements IMainContract.View, Vi
 
     @Override
     protected void init(@Nullable Bundle state) {
-        mTextHello = (TextView) findViewById(R.id.tvHello);
-        mTextHello.setOnClickListener(this);
-        mBtClick = (Button) findViewById(R.id.btClick);
+//        mTextHello = (TextView) findViewById(R.id.tvHello);
+//        mTextHello.setOnClickListener(this);
+//        mBtClick = (Button) findViewById(R.id.btClick);
+//        mBtClick.setOnClickListener(this);
+        mTvHello.setOnClickListener(this);
         mBtClick.setOnClickListener(this);
-
         mMainPresenter = MainPresenter.getInstance();
         mMainPresenter.attach(this);
         mMainPresenter.loadHelloText();
@@ -34,7 +44,7 @@ public class MainActivity extends BaseActivity implements IMainContract.View, Vi
 
     @Override
     public void onTextLoaded(String text) {
-        mTextHello.setText(text);
+        mTvHello.setText(text);
     }
 
     @Override
@@ -47,6 +57,20 @@ public class MainActivity extends BaseActivity implements IMainContract.View, Vi
         super.onDestroy();
         mMainPresenter.detach();
     }
+
+//    @OnClick({R.id.tvHello, R.id.btClick})
+//    void onClickButton(View view) {
+//        switch (view.getId()) {
+//            case R.id.tvHello:
+//                mMainPresenter.loadHelloText();
+//                break;
+//            case R.id.btClick:
+//                mMainPresenter.setClickHere();
+//                break;
+//            default:
+//                break;
+//        }
+//    }
 
     @Override
     public void onClick(View view) {
