@@ -1,5 +1,6 @@
 package com.ifi.kuirrin.mvp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ifi.kuirrin.mvp.base.BaseActivity;
+import com.ifi.kuirrin.mvp.takephoto.CameraActivity;
 
 import butterknife.BindView;
 //import butterknife.ButterKnife;
@@ -49,7 +51,9 @@ public class MainActivity extends BaseActivity implements IMainContract.View, Vi
 
     @Override
     public void onClicked() {
-        mBtClick.setText("Clicked");
+        Intent intent = new Intent(this, CameraActivity.class);
+        startActivity(intent);
+//        mBtClick.setText("Clicked");
     }
 
     @Override
