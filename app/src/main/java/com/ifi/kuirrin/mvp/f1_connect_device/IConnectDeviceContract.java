@@ -1,4 +1,4 @@
-package com.ifi.kuirrin.mvp.f1_connect_devie;
+package com.ifi.kuirrin.mvp.f1_connect_device;
 
 import com.ifi.kuirrin.mvp.base.IBasePresenter;
 import com.ifi.kuirrin.mvp.base.IBaseView;

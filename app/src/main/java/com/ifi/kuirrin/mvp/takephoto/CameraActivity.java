@@ -31,7 +31,7 @@ public class CameraActivity extends BaseActivity {
 
     @Override
     protected int getContentResource() {
-        return R.layout.capture_photo_layout;
+        return R.layout.capture_photo;
     }
 
     @Override

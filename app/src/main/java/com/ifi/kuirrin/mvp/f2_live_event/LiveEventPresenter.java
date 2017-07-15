@@ -16,11 +16,12 @@ public class LiveEventPresenter extends BasePresenter<ILiveEventContract.View>
     }
 
     @Override
-    public void connectDevice(boolean status) {
-        if (status) {
-            getView().onConnectDeviceSuccess();
-        } else {
-            getView().onConnectDeviceFailed();
-        }
+    public void initFragment() {
+        getView().onInitFragment();
+    }
+
+    @Override
+    public void symptomOccurrence() {
+        getView().onSymptomOccurrence();
     }
 }

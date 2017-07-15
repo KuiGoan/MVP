@@ -2,8 +2,8 @@ package com.ifi.kuirrin.mvp.base.di;
 
 import android.content.Context;
 
-import com.ifi.kuirrin.mvp.f1_connect_devie.IConnectDeviceContract;
-import com.ifi.kuirrin.mvp.f1_connect_devie.ConnectDevicePresenter;
+import com.ifi.kuirrin.mvp.f1_connect_device.IConnectDeviceContract;
+import com.ifi.kuirrin.mvp.f1_connect_device.ConnectDevicePresenter;
 
 //import javax.inject.Singleton;
 //

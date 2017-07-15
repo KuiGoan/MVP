@@ -29,8 +29,8 @@ public class CustomFragmentManager {
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager
                 .beginTransaction();
-        fragmentTransaction.add(layoutId, fragment);
-        fragmentTransaction.addToBackStack(tag);
+        fragmentTransaction.add(layoutId, fragment, tag);
+//        fragmentTransaction.addToBackStack(tag);
         fragmentTransaction.commit();
     }
 
@@ -39,7 +39,7 @@ public class CustomFragmentManager {
 //        fragmentManager.popBackStack();
         FragmentTransaction fragmentTransaction = fragmentManager
                 .beginTransaction();
-        fragmentTransaction.replace(layoutId, fragment);
+        fragmentTransaction.replace(layoutId, fragment, tag);
         fragmentTransaction.addToBackStack(tag);
         fragmentTransaction.commit();
     }

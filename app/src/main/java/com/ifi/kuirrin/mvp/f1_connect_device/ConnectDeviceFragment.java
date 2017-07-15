@@ -1,4 +1,4 @@
-package com.ifi.kuirrin.mvp.f1_connect_devie;
+package com.ifi.kuirrin.mvp.f1_connect_device;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -30,7 +30,7 @@ public class ConnectDeviceFragment extends BaseFragment implements IConnectDevic
 
     @Override
     protected int getContentResource() {
-        return R.layout.f1_connect_devcie_fragment_layout;
+        return R.layout.f1_connect_devcie_fragment;
     }
 
     @Override

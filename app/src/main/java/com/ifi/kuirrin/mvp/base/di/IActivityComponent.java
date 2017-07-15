@@ -1,6 +1,6 @@
 package com.ifi.kuirrin.mvp.base.di;
 
-import com.ifi.kuirrin.mvp.f1_connect_devie.ConnectDeviceFragment;
+import com.ifi.kuirrin.mvp.f1_connect_device.ConnectDeviceFragment;
 
 /**
  * Created by ddquy on 7/14/2017.

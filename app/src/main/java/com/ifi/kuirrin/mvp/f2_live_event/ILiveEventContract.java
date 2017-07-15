@@ -10,12 +10,26 @@ import com.ifi.kuirrin.mvp.base.IBaseView;
 public interface ILiveEventContract {
     // User actions. Presenter will implement
     interface Presenter extends IBasePresenter<ILiveEventContract.View> {
-        void connectDevice(boolean status);
+
+//        void defecationBeginsPressed();
+//
+//        void goingToBedPressed();
+//
+//        void startAMealPressed();
+        void initFragment();
+
+        void symptomOccurrence();
     }
 
     interface View extends IBaseView {
-        void onConnectDeviceSuccess();
 
-        void onConnectDeviceFailed();
+//        void onDefecationBegins();
+//
+//        void onGoingToBed();
+//
+//        void onStartAMeal();
+        void onInitFragment();
+
+        void onSymptomOccurrence();
     }
 }

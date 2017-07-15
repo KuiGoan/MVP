@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.ifi.kuirrin.mvp.base.BaseActivity;
-import com.ifi.kuirrin.mvp.f1_connect_devie.ConnectDeviceFragment;
+import com.ifi.kuirrin.mvp.f1_connect_device.ConnectDeviceFragment;
 import com.ifi.kuirrin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirrin.mvp.util.Logger;
 //import butterknife.ButterKnife;
@@ -19,7 +19,7 @@ public class HomeActivity extends BaseActivity implements IHomeContract.View {
 
     @Override
     protected int getContentResource() {
-        return R.layout.home_activity_layout;
+        return R.layout.home_activity;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class HomeActivity extends BaseActivity implements IHomeContract.View {
         if (getFragmentManager().getBackStackEntryCount() > 0) {
 //            getFragmentManager().popBackStack();
         } else {
-            finish();
+//            finish();
         }
     }
 }
