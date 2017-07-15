@@ -33,6 +33,7 @@ public class CameraPreview extends SurfaceView implements
             mCamera.startPreview();
         } catch (IOException e) {
             // left blank for now
+            e.printStackTrace();
         }
     }
 

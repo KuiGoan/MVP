@@ -2,8 +2,8 @@ package com.ifi.kuirrin.mvp.base.di;
 
 import android.content.Context;
 
-import com.ifi.kuirrin.mvp.home.IMainContract;
-import com.ifi.kuirrin.mvp.home.MainPresenter;
+import com.ifi.kuirrin.mvp.f1_connect_devie.IConnectDeviceContract;
+import com.ifi.kuirrin.mvp.f1_connect_devie.ConnectDevicePresenter;
 
 //import javax.inject.Singleton;
 //
@@ -30,7 +30,7 @@ public class ActivityModule {
 
 //    @Provides
 //    @Singleton
-    IMainContract.Presenter providesMainPresenter() {
-        return new MainPresenter();
+    IConnectDeviceContract.Presenter providesMainPresenter() {
+        return new ConnectDevicePresenter();
     }
 }
