@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ifi.kuirrin.mvp">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ifi.kuirin.mvp">
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--<uses-sdk tools:overrideLibrary="com.ifi.kuirin.base"/>-->
 
     <application
         android:allowBackup="true"
@@ -13,14 +16,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeActivity">
+        <activity android:name="com.ifi.kuirin.mvp.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".takephoto.CameraActivity">
+        <activity android:name="com.ifi.kuirin.mvp.takephoto.CameraActivity">
         </activity>
     </application>
 
