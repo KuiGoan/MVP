@@ -31,7 +31,7 @@ public class CustomFragmentManager {
                 .beginTransaction();
         fragmentTransaction.add(layoutId, fragment, tag);
 //        fragmentTransaction.addToBackStack(tag);
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
     public void replaceFragment(int layoutId, @NonNull Fragment fragment, @NonNull String tag) {
@@ -41,7 +41,7 @@ public class CustomFragmentManager {
                 .beginTransaction();
         fragmentTransaction.replace(layoutId, fragment, tag);
         fragmentTransaction.addToBackStack(tag);
-        fragmentTransaction.commit();
+        fragmentTransaction.commitAllowingStateLoss();
     }
 
     public void popBackStack() {

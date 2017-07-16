@@ -20,26 +20,31 @@
         android:orientation="horizontal">
 
         <com.ifi.kuirin.mvp.base.view.RectangleView
+            android:id="@+id/box1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_a_meal_start"
             app:smallIcon="@mipmap/ic_launcher_round"
             app:text="box 1"
             app:smallIconPosition="left"/>
 
         <com.ifi.kuirin.mvp.base.view.RectangleView
+            android:id="@+id/box2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
             app:orientation="vertical"
             app:smallIcon="@mipmap/ic_launcher_round"
             app:text="box 2" />
 
         <com.ifi.kuirin.mvp.base.view.RectangleView
+            android:id="@+id/box3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_weight="1"
-            app:orientation="vertical"
+            android:background="@drawable/bg_rectangle_a_meal_start"
+            app:smallIconPosition="right"
             app:smallIcon="@mipmap/ic_launcher_round"
             app:text="box 3" />
     </LinearLayout>

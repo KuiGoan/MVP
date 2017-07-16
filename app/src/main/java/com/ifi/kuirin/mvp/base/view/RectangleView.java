@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +35,7 @@ public class RectangleView extends RelativeLayout {
     @BindView(R.id.rectangle_view_text)
     TextView mRectangleViewText;
     @BindView(R.id.rectangle_view)
-    CardView mRectangleView;
+    RelativeLayout mRectangleView;
 
 
     public RectangleView(@NonNull Context context) {
@@ -54,7 +53,8 @@ public class RectangleView extends RelativeLayout {
         if (context == null) {
             return;
         }
-
+//        setFocusable(true);
+//        setFocusableInTouchMode(true);
         TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
                 R.styleable.RectangleView,
