@@ -44,7 +44,7 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
         mBtnSymptomOccurrence.setOnClickListener(this);
 
         CustomFragmentManager.build(getActivity())
-                .addFragment(mFramelayout.getId(), new F2FrameLayoutFragment(), TAG);
+                .addFragment(mFramelayout.getId(), new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
     }
 
     @Override

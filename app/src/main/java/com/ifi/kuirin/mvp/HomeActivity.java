@@ -27,6 +27,7 @@ public class HomeActivity extends BaseActivity implements IHomeContract.View {
     protected void init(@Nullable Bundle state) {
         mHomePresenter = HomePresenter.getInstance();
         mHomePresenter.attach(this);
+        Logger.d(TAG, "init()");
         CustomFragmentManager
                 .build(this)
                 .addFragment(R.id.home_framelayout,

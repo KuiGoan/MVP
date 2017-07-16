@@ -27,6 +27,10 @@ public class CustomFragmentManager {
 
     public void addFragment(int layoutId, @NonNull Fragment fragment, @NonNull String tag) {
         FragmentManager fragmentManager = getFragmentManager();
+        Fragment fragmentCheck = fragmentManager.findFragmentByTag(tag);
+        if (fragmentCheck != null) {
+            return;
+        }
         FragmentTransaction fragmentTransaction = fragmentManager
                 .beginTransaction();
         fragmentTransaction.add(layoutId, fragment, tag);
@@ -37,6 +41,10 @@ public class CustomFragmentManager {
     public void replaceFragment(int layoutId, @NonNull Fragment fragment, @NonNull String tag) {
         FragmentManager fragmentManager = getFragmentManager();
 //        fragmentManager.popBackStack();
+        Fragment fragmentCheck = fragmentManager.findFragmentByTag(tag);
+        if (fragmentCheck != null) {
+            return;
+        }
         FragmentTransaction fragmentTransaction = fragmentManager
                 .beginTransaction();
         fragmentTransaction.replace(layoutId, fragment, tag);

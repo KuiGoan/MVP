@@ -50,6 +50,8 @@ public abstract class BaseFragment<T extends IBasePresenter> extends Fragment im
     @Override
     public void onDestroy() {
         super.onDestroy();
-        unbinder.unbind();
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
     }
 }
