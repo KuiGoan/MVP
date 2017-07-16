@@ -6,5 +6,10 @@
             <enum name="left" value="0"/>
             <enum name="right" value="1"/>
         </attr>
+        <attr name="text" format="string"/>
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
     </declare-styleable>
 </resources>

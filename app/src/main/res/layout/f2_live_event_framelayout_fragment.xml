@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
@@ -10,4 +11,11 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="f2_live_event_framelayout_fragment" />
+
+    <com.ifi.kuirin.mvp.base.view.RectangleView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:smallIcon="@mipmap/ic_launcher_round"
+        app:text="Test"
+        app:orientation="vertical"/>
 </RelativeLayout>

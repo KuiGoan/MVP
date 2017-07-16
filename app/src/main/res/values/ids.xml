@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="small_icon" type="id"/>
+    //Using for rectangle_view
+    <item name="rectangle_view" type="id"/>
+    <item name="rectangle_view_small_icon" type="id"/>
+    <item name="rectangle_view_text" type="id"/>
 </resources>
