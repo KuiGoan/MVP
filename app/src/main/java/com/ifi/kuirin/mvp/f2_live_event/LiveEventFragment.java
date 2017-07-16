@@ -39,12 +39,13 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
 
     @Override
     protected void init(@Nullable Bundle state, View view) {
+        Logger.d(TAG, "init()");
         mLiveEventPresenter = LiveEventPresenter.getInstance();
         mLiveEventPresenter.attach(this);
         mBtnSymptomOccurrence.setOnClickListener(this);
 
         CustomFragmentManager.build(getActivity())
-                .addFragment(mFramelayout.getId(), new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
+                .replaceFragmentNonAddStack(mFramelayout.getId(), new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
     }
 
     @Override

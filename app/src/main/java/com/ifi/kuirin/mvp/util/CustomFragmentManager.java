@@ -41,14 +41,19 @@ public class CustomFragmentManager {
     public void replaceFragment(int layoutId, @NonNull Fragment fragment, @NonNull String tag) {
         FragmentManager fragmentManager = getFragmentManager();
 //        fragmentManager.popBackStack();
-        Fragment fragmentCheck = fragmentManager.findFragmentByTag(tag);
-        if (fragmentCheck != null) {
-            return;
-        }
         FragmentTransaction fragmentTransaction = fragmentManager
                 .beginTransaction();
         fragmentTransaction.replace(layoutId, fragment, tag);
         fragmentTransaction.addToBackStack(tag);
+        fragmentTransaction.commitAllowingStateLoss();
+    }
+
+    public void replaceFragmentNonAddStack(int layoutId, @NonNull Fragment fragment, @NonNull String tag) {
+        FragmentManager fragmentManager = getFragmentManager();
+//        fragmentManager.popBackStack();
+        FragmentTransaction fragmentTransaction = fragmentManager
+                .beginTransaction();
+        fragmentTransaction.replace(layoutId, fragment, tag);
         fragmentTransaction.commitAllowingStateLoss();
     }
 
