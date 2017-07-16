@@ -3,12 +3,9 @@ package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.TextView;
 
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
-
-import butterknife.BindView;
 
 /**
  * Created by KuiRin on 7/15/2017 AD.
@@ -17,9 +14,6 @@ import butterknife.BindView;
 public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayoutContract.View, View.OnClickListener {
 
     public static final String TAG = F2FrameLayoutFragment.class.getSimpleName();
-
-    @BindView(R.id.tvHello)
-    TextView mTvHello;
 
     private F2FrameLayoutPresenter mLiveEventPresenter;
 

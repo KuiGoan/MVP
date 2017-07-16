@@ -11,5 +11,6 @@
             <enum name="vertical" value="0"/>
             <enum name="horizontal" value="1"/>
         </attr>
+        <attr name="textColor" format="color"/>
     </declare-styleable>
 </resources>

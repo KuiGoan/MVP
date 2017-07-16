@@ -3,7 +3,9 @@ package com.ifi.kuirin.mvp.base.view;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,7 @@ public class RectangleView extends RelativeLayout {
     int mSmallIcon;
     int mSmallIconPosition;
     String mText;
+    int mTextColor;
     int mOrientation;
 
     @BindView(R.id.rectangle_view_small_icon)
@@ -33,7 +36,7 @@ public class RectangleView extends RelativeLayout {
     @BindView(R.id.rectangle_view_text)
     TextView mRectangleViewText;
     @BindView(R.id.rectangle_view)
-    RelativeLayout mRectangleView;
+    CardView mRectangleView;
 
 
     public RectangleView(@NonNull Context context) {
@@ -60,6 +63,7 @@ public class RectangleView extends RelativeLayout {
             mSmallIcon = a.getResourceId(R.styleable.RectangleView_smallIcon, -1);
             mSmallIconPosition = a.getInteger(R.styleable.RectangleView_smallIconPosition, -1);
             mText = a.getString(R.styleable.RectangleView_text);
+            mTextColor = a.getColor(R.styleable.RectangleView_textColor, Color.BLACK);
             mOrientation = a.getInteger(R.styleable.RectangleView_orientation, -1);
             initialize(context);
         } finally {
@@ -80,6 +84,7 @@ public class RectangleView extends RelativeLayout {
                 layout = R.layout.base_rectangle_view;
                 break;
         }
+
         ViewGroup viewGroup = (ViewGroup) inflate(context, layout, this);
         ButterKnife.bind(this, viewGroup);
 
@@ -103,6 +108,7 @@ public class RectangleView extends RelativeLayout {
 
         if (mText != null) {
             mRectangleViewText.setText(mText);
+            mRectangleViewText.setTextColor(mTextColor);
         }
     }
 
