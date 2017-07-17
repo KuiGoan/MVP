@@ -5,6 +5,9 @@
     <item name="rectangle_view_small_icon" type="id"/>
     <item name="rectangle_view_text" type="id"/>
 
+    <!--Using for base_recycler_dialog_fragment-->
+    <item name="dialog_recycler_view" type="id"/>
+
     <!--Using for f1_connect_device screen-->
     <item name="f1_connect_btn" type="id"/>
 

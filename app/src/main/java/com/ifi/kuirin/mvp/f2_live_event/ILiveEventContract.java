@@ -11,23 +11,15 @@ public interface ILiveEventContract {
     // User actions. Presenter will implement
     interface Presenter extends IBasePresenter<View> {
 
-//        void defecationBeginsPressed();
-//
-//        void goingToBedPressed();
-//
-//        void startAMealPressed();
-
         void symptomOccurrence();
+
+        void itemSymptonSelect(int position);
     }
 
     interface View extends IBaseView {
 
-//        void onDefecationBegins();
-//
-//        void onGoingToBed();
-//
-//        void onStartAMeal();
-
         void onSymptomOccurrence();
+
+        void onSymptonSelected(int position);
     }
 }

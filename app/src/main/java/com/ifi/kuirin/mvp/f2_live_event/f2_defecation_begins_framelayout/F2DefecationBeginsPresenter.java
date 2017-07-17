@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.f2_live_event.f2_going_to_bed;
+package com.ifi.kuirin.mvp.f2_live_event.f2_defecation_begins_framelayout;
 
 import com.ifi.kuirin.mvp.base.BasePresenter;
 
@@ -6,12 +6,12 @@ import com.ifi.kuirin.mvp.base.BasePresenter;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F2GoingToBedPresenter extends BasePresenter<IF2GoingToBedContract.View>
-        implements IF2GoingToBedContract.Presenter {
+public class F2DefecationBeginsPresenter extends BasePresenter<IF2DefecationBeginsContract.View>
+        implements IF2DefecationBeginsContract.Presenter {
 
-    private static F2GoingToBedPresenter sInstanse = new F2GoingToBedPresenter();
+    private static F2DefecationBeginsPresenter sInstanse = new F2DefecationBeginsPresenter();
 
-    public static F2GoingToBedPresenter getInstance() {
+    public static F2DefecationBeginsPresenter getInstance() {
         return sInstanse;
     }
 

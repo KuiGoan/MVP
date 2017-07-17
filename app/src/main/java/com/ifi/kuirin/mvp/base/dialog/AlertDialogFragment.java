@@ -15,14 +15,18 @@ public class AlertDialogFragment extends DialogFragment {
 
     public static final String TAG = AlertDialogFragment.class.getSimpleName();
 
+    private static final String KEY_TITLE = "title";
+
+    private static final String KEY_DESC = "desc";
+
     private static AlertDialogFragment sInstance;
 
     public static AlertDialogFragment getInstance(String title, String desc) {
         if (sInstance == null) {
             sInstance = new AlertDialogFragment();
             Bundle args = new Bundle();
-            args.putString("title", title);
-            args.putString("desc", desc);
+            args.putString(KEY_TITLE, title);
+            args.putString(KEY_DESC, desc);
             sInstance.setArguments(args);
         }
         return sInstance;
@@ -31,8 +35,8 @@ public class AlertDialogFragment extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        String title = getArguments().getString("title");
-        String desc = getArguments().getString("desc");
+        String title = getArguments().getString(KEY_TITLE);
+        String desc = getArguments().getString(KEY_DESC);
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
         alertDialogBuilder.setTitle(title);

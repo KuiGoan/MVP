@@ -20,4 +20,9 @@ public class LiveEventPresenter extends BasePresenter<ILiveEventContract.View>
     public void symptomOccurrence() {
         getView().onSymptomOccurrence();
     }
+
+    @Override
+    public void itemSymptonSelect(int position) {
+        getView().onSymptonSelected(position);
+    }
 }

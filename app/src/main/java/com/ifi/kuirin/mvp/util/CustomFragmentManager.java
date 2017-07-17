@@ -1,6 +1,7 @@
 package com.ifi.kuirin.mvp.util;
 
 import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -64,13 +65,13 @@ public class CustomFragmentManager {
         fragmentManager.popBackStack();
     }
 
-    public void addAlertDialogFragment(AlertDialogFragment alertDialogFragment) {
+    public void addDialogFragment(DialogFragment dialogFragment, String tag) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         FragmentManager fm = getFragmentManager();
-        Fragment prev = getFragmentManager().findFragmentByTag(AlertDialogFragment.TAG);
+        Fragment prev = getFragmentManager().findFragmentByTag(tag);
         if (prev != null) {
             ft.remove(prev);
         }
-        alertDialogFragment.show(fm, AlertDialogFragment.TAG);
+        dialogFragment.show(fm, AlertDialogFragment.TAG);
     }
 }

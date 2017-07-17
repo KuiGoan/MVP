@@ -83,7 +83,8 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
     public void onStartAMeal() {
         CustomFragmentManager
                 .build((AppCompatActivity) getActivity())
-                .addAlertDialogFragment(AlertDialogFragment.getInstance("aaa", "bbbb"));
+                .addDialogFragment(AlertDialogFragment
+                        .getInstance("aaa", "bbbb"), AlertDialogFragment.TAG);
     }
 
     @Override
