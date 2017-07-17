@@ -2,6 +2,7 @@ package com.ifi.kuirin.mvp.f1_connect_device;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
@@ -48,7 +49,7 @@ public class ConnectDeviceFragment extends BaseFragment implements IConnectDevic
     @Override
     public void onConnectDeviceSuccess() {
         Logger.d(TAG, "onConnectDeviceSuccess()");
-        CustomFragmentManager.build(getActivity())
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
                 .replaceFragment(R.id.home_framelayout, new LiveEventFragment(), LiveEventFragment.TAG);
     }
 

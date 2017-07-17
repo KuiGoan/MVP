@@ -2,21 +2,25 @@ package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+//
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.view.RectangleView;
-import com.ifi.kuirin.mvp.util.Logger;
+
+import android.support.v4.app.FragmentManager;
+
+import com.ifi.kuirin.mvp.base.dialog.AlertDialogFragment;
+import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by KuiRin on 7/15/2017 AD.
@@ -60,17 +64,37 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.f2_a_meal_btn:
-                Logger.d(TAG, "f2_a_meal_btn");
+                if (true) {
+                    mLiveEventPresenter.startAMealPressed();
+                } else {
+                    mLiveEventPresenter.endOfAMealPressed();
+                }
                 break;
             case R.id.f2_defeation_btn:
-                Logger.d(TAG, "f2_defeation_btn");
+                mLiveEventPresenter.defecationBeginsPressed();
                 break;
             case R.id.f2_sleep_btn:
-                Logger.d(TAG, "f2_sleep_btn");
+                if (true) {
+                    mLiveEventPresenter.goingToBedPressed();
+                } else {
+                    mLiveEventPresenter.wakeUp();
+                }
                 break;
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onStartAMeal() {
+        CustomFragmentManager
+                .build((AppCompatActivity) getActivity())
+                .addAlertDialogFragment(AlertDialogFragment.getInstance("aaa", "bbbb"));
+    }
+
+    @Override
+    public void onEndOfTheMeal() {
+
     }
 
     @Override
@@ -84,7 +108,7 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
     }
 
     @Override
-    public void onStartAMeal() {
+    public void onWakeup() {
 
     }
 }

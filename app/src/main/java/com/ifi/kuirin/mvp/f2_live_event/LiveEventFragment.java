@@ -2,6 +2,7 @@ package com.ifi.kuirin.mvp.f2_live_event;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
@@ -43,7 +44,7 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
         mLiveEventPresenter.attach(this);
         mF2SymptomOccurrenceBtn.setOnClickListener(this);
 
-        CustomFragmentManager.build(getActivity())
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
                 .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout, new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
     }
 

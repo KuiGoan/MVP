@@ -16,6 +16,16 @@ public class F2FrameLayoutPresenter extends BasePresenter<IF2FrameLayoutContract
     }
 
     @Override
+    public void startAMealPressed() {
+        getView().onStartAMeal();
+    }
+
+    @Override
+    public void endOfAMealPressed() {
+
+    }
+
+    @Override
     public void defecationBeginsPressed() {
         getView().onDefecationBegins();
     }
@@ -26,8 +36,7 @@ public class F2FrameLayoutPresenter extends BasePresenter<IF2FrameLayoutContract
     }
 
     @Override
-    public void startAMealPressed() {
-        getView().onStartAMeal();
-    }
+    public void wakeUp() {
 
+    }
 }

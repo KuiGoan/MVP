@@ -11,19 +11,27 @@ public interface IF2FrameLayoutContract {
     // User actions. Presenter will implement
     interface Presenter extends IBasePresenter<View> {
 
+        void startAMealPressed();
+
+        void endOfAMealPressed();
+
         void defecationBeginsPressed();
 
         void goingToBedPressed();
 
-        void startAMealPressed();
+        void wakeUp();
     }
 
     interface View extends IBaseView {
+
+        void onStartAMeal();
+
+        void onEndOfTheMeal();
 
         void onDefecationBegins();
 
         void onGoingToBed();
 
-        void onStartAMeal();
+        void onWakeup();
     }
 }
