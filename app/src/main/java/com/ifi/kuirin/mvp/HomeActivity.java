@@ -7,9 +7,6 @@ import com.ifi.kuirin.mvp.base.BaseActivity;
 import com.ifi.kuirin.mvp.f1_connect_device.ConnectDeviceFragment;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
-//import butterknife.ButterKnife;
-//import butterknife.OnClick;
-//import butterknife.OnItemClick;
 
 public class HomeActivity extends BaseActivity implements IHomeContract.View {
 

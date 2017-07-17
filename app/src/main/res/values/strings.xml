@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">MVP</string>
+
+    <!--Using for f1_connect_device screen-->
+    <string name="f1_connect_device">測定開始</string>
+
+    <!--Using for f2_live_event screen-->
+    <string name="f2_framelayout_title">f2_framelayout_title</string>
+    <string name="f2_start_a_meal">食事開始</string>
+    <string name="f2_end_of_a_meal">食事終了</string>
+    <string name="f2_defecation_begins">排便開始</string>
+    <string name="f2_defecation_select">便選択</string>
+    <string name="f2_going_to_bed">就寝</string>
+    <string name="f2_wake_up">起床</string>
+    <string name="f2_symptom_occurrence">症状発生</string>
+    <string name="f2_symptoms_disappearance">症状消失</string>
+
+    <!--Using for f3_sympton screen-->
+    <string name="f3_symptom_selection">症状選択</string>
+
+    <!--Using for f4_pain_place screen-->
+
+
 </resources>

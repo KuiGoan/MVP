@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    //Using for rectangle_view
+    <!--Using for base_rectangle_view-->
     <item name="rectangle_view" type="id"/>
     <item name="rectangle_view_small_icon" type="id"/>
     <item name="rectangle_view_text" type="id"/>
+
+    <!--Using for f1_connect_device screen-->
+    <item name="f1_connect_btn" type="id"/>
+
+    <!--Using for f2_live_event screen-->
+    <item name="f2_symptom_occurrence_btn" type="id"/>
+    <item name="f2_symptom_occurrence_text" type="id"/>
+    <item name="f2_live_event_framelayout" type="id"/>
+    <item name="f2_framelayout_threebox" type="id"/>
+    <item name="f2_frame_layout_title_text" type="id"/>
+    <item name="f2_frame_layout_desc_text" type="id"/>
+    <item name="f2_a_meal_btn" type="id"/>
+    <item name="f2_defeation_btn" type="id"/>
+    <item name="f2_sleep_btn" type="id"/>
+
+    <!--Using for f3_sympton screen-->
+
+
+    <!--Using for f4_pain_place screen-->
+
+
+    <!--Using for f4_pain_level screen-->
 </resources>

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
@@ -13,15 +12,14 @@ import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
-public class ConnectDeviceFragment extends BaseFragment implements IConnectDeviceContract.View, View.OnClickListener {
+public class ConnectDeviceFragment extends BaseFragment implements IConnectDeviceContract.View {
 
     public static final String TAG = ConnectDeviceFragment.class.getClass().getSimpleName();
 
-    @BindView(R.id.tvHello)
-    TextView mTvHello;
-    @BindView(R.id.btnClick)
-    Button mBtClick;
+    @BindView(R.id.f1_connect_btn)
+    Button mConnectBtn;
 
     private ConnectDevicePresenter mConnectDevicePresenter;
 
@@ -32,8 +30,6 @@ public class ConnectDeviceFragment extends BaseFragment implements IConnectDevic
 
     @Override
     protected void init(@Nullable Bundle state, View view) {
-        mTvHello.setOnClickListener(this);
-        mBtClick.setOnClickListener(this);
         mConnectDevicePresenter = ConnectDevicePresenter.getInstance();
         mConnectDevicePresenter.attach(this);
     }
@@ -44,15 +40,9 @@ public class ConnectDeviceFragment extends BaseFragment implements IConnectDevic
         mConnectDevicePresenter.detach();
     }
 
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btnClick:
-                mConnectDevicePresenter.checkConnect();
-                break;
-            default:
-                break;
-        }
+    @OnClick(R.id.f1_connect_btn)
+    public void onViewClicked() {
+        mConnectDevicePresenter.checkConnect();
     }
 
     @Override

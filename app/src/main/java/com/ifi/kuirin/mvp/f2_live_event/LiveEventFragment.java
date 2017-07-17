@@ -22,13 +22,12 @@ import butterknife.BindView;
 public class LiveEventFragment extends BaseFragment implements ILiveEventContract.View, View.OnClickListener {
 
     public static final String TAG = LiveEventFragment.class.getSimpleName();
-
-    @BindView(R.id.tvHello)
-    TextView mTvHello;
+    @BindView(R.id.f2_symptom_occurrence_text)
+    TextView mF2SymptomOccurrenceText;
+    @BindView(R.id.f2_symptom_occurrence_btn)
+    RelativeLayout mF2SymptomOccurrenceBtn;
     @BindView(R.id.f2_live_event_framelayout)
-    FrameLayout mFramelayout;
-    @BindView(R.id.btn_symptom_occurrence)
-    RelativeLayout mBtnSymptomOccurrence;
+    FrameLayout mF2LiveEventFramelayout;
 
     private LiveEventPresenter mLiveEventPresenter;
 
@@ -42,16 +41,16 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
         Logger.d(TAG, "init()");
         mLiveEventPresenter = LiveEventPresenter.getInstance();
         mLiveEventPresenter.attach(this);
-        mBtnSymptomOccurrence.setOnClickListener(this);
+        mF2SymptomOccurrenceBtn.setOnClickListener(this);
 
         CustomFragmentManager.build(getActivity())
-                .replaceFragmentNonAddStack(mFramelayout.getId(), new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
+                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout, new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_symptom_occurrence:
+            case R.id.f2_symptom_occurrence_btn:
                 mLiveEventPresenter.symptomOccurrence();
                 break;
             default:
