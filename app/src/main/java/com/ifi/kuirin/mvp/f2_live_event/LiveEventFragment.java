@@ -7,9 +7,8 @@ import android.view.View;
 
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
-import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1.F1FrameLayoutFragment;
-import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1_pain_level_selected.F1FrameLayoutPainLevelSelectedFragment;
-import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2.F2FrameLayoutFragment;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1.F2FrameLayoutFragment;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1_pain_level_selected.F2FrameLayoutPainLevelSelectedFragment;
 import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_defecation_begins.F2DefecationBeginsFragment;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
@@ -49,9 +48,12 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
 
     @Override
     public void onDefecationDontSelect() {
+//        CustomFragmentManager.build((AppCompatActivity) getActivity())
+//                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_2,
+//                        new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
         CustomFragmentManager.build((AppCompatActivity) getActivity())
                 .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_2,
-                        new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
+                        new F2DefecationBeginsFragment(), F2DefecationBeginsFragment.TAG);
     }
 
     @Override
@@ -65,14 +67,14 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
     public void onPainLevelDontSelect() {
         CustomFragmentManager.build((AppCompatActivity) getActivity())
                 .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_1,
-                        new F1FrameLayoutFragment(), F1FrameLayoutFragment.TAG);
+                        new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
     }
 
     @Override
     public void onPainLevelHasSelected() {
         CustomFragmentManager.build((AppCompatActivity) getActivity())
                 .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_1,
-                        new F1FrameLayoutPainLevelSelectedFragment(),
-                        F1FrameLayoutPainLevelSelectedFragment.TAG);
+                        new F2FrameLayoutPainLevelSelectedFragment(),
+                        F2FrameLayoutPainLevelSelectedFragment.TAG);
     }
 }

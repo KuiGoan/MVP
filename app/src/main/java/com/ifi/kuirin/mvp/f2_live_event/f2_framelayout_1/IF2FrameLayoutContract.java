@@ -7,7 +7,7 @@ import com.ifi.kuirin.mvp.base.IBaseView;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public interface IF1FrameLayoutContract {
+public interface IF2FrameLayoutContract {
     // User actions. Presenter will implement
     interface Presenter extends IBasePresenter<View> {
 

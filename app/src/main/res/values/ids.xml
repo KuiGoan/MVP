@@ -8,25 +8,38 @@
     <!--Using for base_recycler_dialog_fragment-->
     <item name="dialog_recycler_view" type="id"/>
 
-    <!--Using for f1_connect_device screen-->
+    <!--F1_connect_device screen-->
     <item name="f1_connect_btn" type="id"/>
 
-    <!--Using for f2_live_event screen-->
+    <!--F2_live_event screen-->
+    
+    <!--F2 live_event framelayout 1-->
+    <item name="f2_live_event_framelayout_1" type="id"/>
     <item name="f2_symptom_occurrence_btn" type="id"/>
     <item name="f2_symptom_occurrence_text" type="id"/>
-
-    <item name="f2_live_event_framelayout_1" type="id"/>
+    
+    <!--F2 live_event framelayout 2-->
     <item name="f2_live_event_framelayout_2" type="id"/>
-
+    
     <item name="f2_framelayout_threeitems" type="id"/>
     <item name="f2_frame_layout_title_text" type="id"/>
-    <item name="f2_frame_layout_desc_text" type="id"/>
     <item name="f2_a_meal_btn" type="id"/>
     <item name="f2_defeation_btn" type="id"/>
     <item name="f2_sleep_btn" type="id"/>
+    
+    <item name="f2_defecation_recycler" type="id"/>
+    <item name="f2_defecation_title_text" type="id"/>
 
 
     <item name="f2_framelayout_eightitems" type="id"/>
+    <item name="f2_framelayout_defecatopn_1" type="id"/>
+    <item name="f2_framelayout_defecatopn_2" type="id"/>
+    <item name="f2_framelayout_defecatopn_3" type="id"/>
+    <item name="f2_framelayout_defecatopn_4" type="id"/>
+    <item name="f2_framelayout_defecatopn_5" type="id"/>
+    <item name="f2_framelayout_defecatopn_6" type="id"/>
+    <item name="f2_framelayout_defecatopn_7" type="id"/>
+    <item name="f2_framelayout_defecatopn_8" type="id"/>
     <!--Using for f3_sympton screen-->
 
 

@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_defecation_begins;
+package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_test;
 
 import com.ifi.kuirin.mvp.base.BasePresenter;
 
@@ -16,13 +16,13 @@ public class F2DefecationBeginsPresenter extends BasePresenter<IF2DefecationBegi
     }
 
 
-//    @Override
-//    public void loadData() {
-//        getView().onLoadData();
-//    }
-//
-//    @Override
-//    public void itemPresedenceSelect(int position) {
-//        getView().onItemPresedenceSelected(position);
-//    }
+    @Override
+    public void loadData() {
+        getView().onLoadData();
+    }
+
+    @Override
+    public void itemPresedenceSelect(int position) {
+        getView().onItemPresedenceSelected(position);
+    }
 }

@@ -20,9 +20,9 @@ import butterknife.OnClick;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F1FrameLayoutPainLevelSelectedFragment extends BaseFragment implements IF1FrameLayoutPainLevelSelectedContract.View {
+public class F2FrameLayoutPainLevelSelectedFragment extends BaseFragment implements IF2FrameLayoutPainLevelSelectedContract.View {
 
-    public static final String TAG = F1FrameLayoutPainLevelSelectedFragment.class.getSimpleName();
+    public static final String TAG = F2FrameLayoutPainLevelSelectedFragment.class.getSimpleName();
     @BindView(R.id.f2_frame_layout_title_text)
     TextView mF2FrameLayoutTitleText;
     @BindView(R.id.f2_a_meal_btn)
@@ -34,7 +34,7 @@ public class F1FrameLayoutPainLevelSelectedFragment extends BaseFragment impleme
     @BindView(R.id.f2_framelayout_threeitems)
     LinearLayout mF2FramelayoutThreebox;
 
-    private F1FrameLayoutPainLevelSelectedPresenter mLiveEventPresenter;
+    private F2FrameLayoutPainLevelSelectedPresenter mLiveEventPresenter;
 
     @Override
     protected int getContentResource() {
@@ -44,7 +44,7 @@ public class F1FrameLayoutPainLevelSelectedFragment extends BaseFragment impleme
     @Override
     protected void init(@Nullable Bundle state, View view) {
 
-        mLiveEventPresenter = F1FrameLayoutPainLevelSelectedPresenter.getInstance();
+        mLiveEventPresenter = F2FrameLayoutPainLevelSelectedPresenter.getInstance();
         mLiveEventPresenter.attach(this);
     }
 

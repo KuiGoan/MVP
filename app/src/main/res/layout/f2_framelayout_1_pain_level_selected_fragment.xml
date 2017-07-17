@@ -5,7 +5,6 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@id/f2_frame_layout_title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -13,14 +12,12 @@
         android:layout_above="@+id/f2_framelayout_threeitems"/>
 
     <LinearLayout
-        android:id="@id/f2_framelayout_threeitems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="horizontal">
 
         <com.ifi.kuirin.mvp.base.view.RectangleView
-            android:id="@id/f2_a_meal_btn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -30,7 +27,6 @@
             app:smallIconPosition="left"/>
 
         <com.ifi.kuirin.mvp.base.view.RectangleView
-            android:id="@id/f2_defeation_btn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"
@@ -39,7 +35,6 @@
             app:text="@string/f2_defecation_begins" />
 
         <com.ifi.kuirin.mvp.base.view.RectangleView
-            android:id="@id/f2_sleep_btn"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_weight="1"

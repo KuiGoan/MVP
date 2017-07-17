@@ -6,12 +6,12 @@ import com.ifi.kuirin.mvp.base.BasePresenter;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F1FrameLayoutPainLevelSelectedPresenter extends BasePresenter<IF1FrameLayoutPainLevelSelectedContract.View>
-        implements IF1FrameLayoutPainLevelSelectedContract.Presenter {
+public class F2FrameLayoutPainLevelSelectedPresenter extends BasePresenter<IF2FrameLayoutPainLevelSelectedContract.View>
+        implements IF2FrameLayoutPainLevelSelectedContract.Presenter {
 
-    private static F1FrameLayoutPainLevelSelectedPresenter sInstanse = new F1FrameLayoutPainLevelSelectedPresenter();
+    private static F2FrameLayoutPainLevelSelectedPresenter sInstanse = new F2FrameLayoutPainLevelSelectedPresenter();
 
-    public static F1FrameLayoutPainLevelSelectedPresenter getInstance() {
+    public static F2FrameLayoutPainLevelSelectedPresenter getInstance() {
         return sInstanse;
     }
 
