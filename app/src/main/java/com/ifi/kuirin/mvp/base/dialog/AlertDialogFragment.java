@@ -7,8 +7,6 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 
-import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout.F2FrameLayoutFragment;
-
 /**
  * Created by ddquy on 7/17/2017.
  */

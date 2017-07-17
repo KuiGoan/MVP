@@ -2,21 +2,15 @@ package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-//
+
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
-import com.ifi.kuirin.mvp.base.view.RectangleView;
-
-import android.support.v4.app.FragmentManager;
-
 import com.ifi.kuirin.mvp.base.dialog.AlertDialogFragment;
+import com.ifi.kuirin.mvp.base.view.RectangleView;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 
 import butterknife.BindView;
