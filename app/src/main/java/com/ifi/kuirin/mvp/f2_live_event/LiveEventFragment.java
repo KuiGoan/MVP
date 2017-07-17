@@ -2,6 +2,7 @@ package com.ifi.kuirin.mvp.f2_live_event;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -72,6 +73,7 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
                         mLiveEventPresenter.itemSymptonSelect(i);
                     }
                 });
+        listViewDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.ListViewDialogFragment);
         CustomFragmentManager
                 .build((AppCompatActivity) getActivity())
                 .addDialogFragment(listViewDialogFragment, ListViewDialogFragment.TAG);
