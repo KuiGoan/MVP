@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@id/f2_frame_layout_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/f2_framelayout_title"
+        android:layout_above="@+id/f2_framelayout_threeitems"/>
+
+    <LinearLayout
+        android:id="@id/f2_framelayout_eightitems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <com.ifi.kuirin.mvp.base.view.RectangleView
+            android:id="@id/f2_a_meal_btn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_a_meal_start"
+            app:smallIcon="@mipmap/ic_launcher_round"
+            app:text="@string/f2_start_a_meal"
+            app:smallIconPosition="left"/>
+
+        <com.ifi.kuirin.mvp.base.view.RectangleView
+            android:id="@id/f2_defeation_btn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:orientation="vertical"
+            app:smallIcon="@mipmap/ic_launcher_round"
+            app:text="@string/f2_defecation_begins" />
+
+        <com.ifi.kuirin.mvp.base.view.RectangleView
+            android:id="@id/f2_sleep_btn"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rectangle_a_meal_start"
+            app:smallIconPosition="right"
+            app:smallIcon="@mipmap/ic_launcher_round"
+            app:text="@string/f2_going_to_bed" />
+    </LinearLayout>
+</RelativeLayout>

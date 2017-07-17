@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.f2_live_event.f2_defecation_begins_framelayout;
+package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_defecation_begins;
 
 import com.ifi.kuirin.mvp.base.BasePresenter;
 

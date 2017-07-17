@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout;
+package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2;
 
 import com.ifi.kuirin.mvp.base.IBasePresenter;
 import com.ifi.kuirin.mvp.base.IBaseView;

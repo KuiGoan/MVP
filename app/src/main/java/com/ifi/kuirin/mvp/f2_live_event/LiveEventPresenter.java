@@ -16,13 +16,22 @@ public class LiveEventPresenter extends BasePresenter<ILiveEventContract.View>
         return sInstanse;
     }
 
+
     @Override
-    public void symptomOccurrence() {
-        getView().onSymptomOccurrence();
+    public void checkDefecationHasSelected(boolean isSelected) {
+        if (isSelected) {
+            getView().onDefecationHasSelected();
+        } else {
+            getView().onDefecationDontSelect();
+        }
     }
 
     @Override
-    public void itemSymptonSelect(int position) {
-        getView().onSymptonSelected(position);
+    public void checkPainLevelHasSelected(boolean isSelected) {
+        if (isSelected) {
+            getView().onPainLevelHasSelected();
+        } else {
+            getView().onPainLevelDontSelect();
+        }
     }
 }

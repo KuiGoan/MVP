@@ -2,25 +2,17 @@ package com.ifi.kuirin.mvp.f2_live_event;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
-import com.ifi.kuirin.mvp.base.dialog.ListViewDialogFragment;
-import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout.F2FrameLayoutFragment;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1.F1FrameLayoutFragment;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1_pain_level_selected.F1FrameLayoutPainLevelSelectedFragment;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2.F2FrameLayoutFragment;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_defecation_begins.F2DefecationBeginsFragment;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
-
-import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * Created by KuiRin on 7/15/2017 AD.
@@ -29,13 +21,6 @@ import butterknife.OnClick;
 public class LiveEventFragment extends BaseFragment implements ILiveEventContract.View {
 
     public static final String TAG = LiveEventFragment.class.getSimpleName();
-    @BindView(R.id.f2_symptom_occurrence_text)
-    TextView mF2SymptomOccurrenceText;
-    @BindView(R.id.f2_symptom_occurrence_btn)
-    RelativeLayout mF2SymptomOccurrenceBtn;
-    @BindView(R.id.f2_live_event_framelayout)
-    FrameLayout mF2LiveEventFramelayout;
-
     private LiveEventPresenter mLiveEventPresenter;
 
     @Override
@@ -49,53 +34,45 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
         mLiveEventPresenter = LiveEventPresenter.getInstance();
         mLiveEventPresenter.attach(this);
 
-        CustomFragmentManager.build((AppCompatActivity) getActivity())
-                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout, new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
-    }
+        //init framelayout 1
+        mLiveEventPresenter.checkPainLevelHasSelected(false);
 
-    @OnClick(R.id.f2_symptom_occurrence_btn)
-    public void onViewClicked() {
-        mLiveEventPresenter.symptomOccurrence();
-    }
-
-    @Override
-    public void onSymptomOccurrence() {
-        ArrayList<String> data = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            data.add("Item " + i);
-        }
-
-        ListViewDialogFragment listViewDialogFragment = ListViewDialogFragment
-                .getInstance(getString(R.string.f3_symptom_selection)).setData(data)
-                .setListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        mLiveEventPresenter.itemSymptonSelect(i);
-                    }
-                });
-        //Set Style DialogFragment. That will set show title bar dialog fragment
-        listViewDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.ListViewDialogFragment);
-        CustomFragmentManager
-                .build((AppCompatActivity) getActivity())
-                .addDialogFragment(listViewDialogFragment, ListViewDialogFragment.TAG);
-    }
-
-    @Override
-    public void onSymptonSelected(int position) {
-        Logger.d(TAG, "onSymptonSelected()# position = " + position);
-        switch (position) {
-            case 0:
-                break;
-            case 1:
-                break;
-            default:
-                break;
-        }
+        //init framelayout 2
+        mLiveEventPresenter.checkDefecationHasSelected(false);
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
         mLiveEventPresenter.detach();
+    }
+
+    @Override
+    public void onDefecationDontSelect() {
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
+                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_2,
+                        new F2FrameLayoutFragment(), F2FrameLayoutFragment.TAG);
+    }
+
+    @Override
+    public void onDefecationHasSelected() {
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
+                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_2,
+                        new F2DefecationBeginsFragment(), F2DefecationBeginsFragment.TAG);
+    }
+
+    @Override
+    public void onPainLevelDontSelect() {
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
+                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_1,
+                        new F1FrameLayoutFragment(), F1FrameLayoutFragment.TAG);
+    }
+
+    @Override
+    public void onPainLevelHasSelected() {
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
+                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_1,
+                        new F1FrameLayoutPainLevelSelectedFragment(),
+                        F1FrameLayoutPainLevelSelectedFragment.TAG);
     }
 }

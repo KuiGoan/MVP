@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout;
+package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1_pain_level_selected;
 
 import com.ifi.kuirin.mvp.base.BasePresenter;
 
@@ -6,12 +6,12 @@ import com.ifi.kuirin.mvp.base.BasePresenter;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F2FrameLayoutPresenter extends BasePresenter<IF2FrameLayoutContract.View>
-        implements IF2FrameLayoutContract.Presenter {
+public class F1FrameLayoutPainLevelSelectedPresenter extends BasePresenter<IF1FrameLayoutPainLevelSelectedContract.View>
+        implements IF1FrameLayoutPainLevelSelectedContract.Presenter {
 
-    private static F2FrameLayoutPresenter sInstanse = new F2FrameLayoutPresenter();
+    private static F1FrameLayoutPainLevelSelectedPresenter sInstanse = new F1FrameLayoutPainLevelSelectedPresenter();
 
-    public static F2FrameLayoutPresenter getInstance() {
+    public static F1FrameLayoutPainLevelSelectedPresenter getInstance() {
         return sInstanse;
     }
 

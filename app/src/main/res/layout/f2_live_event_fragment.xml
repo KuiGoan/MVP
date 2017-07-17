@@ -4,24 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@id/f2_symptom_occurrence_btn"
+    <FrameLayout
+        android:id="@id/f2_live_event_framelayout_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@id/f2_symptom_occurrence_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/f2_symptom_occurrence" />
-    </RelativeLayout>
+        android:layout_weight="1" />
 
     <FrameLayout
-        android:id="@id/f2_live_event_framelayout"
+        android:id="@id/f2_live_event_framelayout_2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
 </LinearLayout>

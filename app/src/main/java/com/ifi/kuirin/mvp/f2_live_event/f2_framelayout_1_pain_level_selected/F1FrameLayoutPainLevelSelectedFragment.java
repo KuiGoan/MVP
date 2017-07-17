@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout;
+package com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1_pain_level_selected;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,9 +20,9 @@ import butterknife.OnClick;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayoutContract.View {
+public class F1FrameLayoutPainLevelSelectedFragment extends BaseFragment implements IF1FrameLayoutPainLevelSelectedContract.View {
 
-    public static final String TAG = F2FrameLayoutFragment.class.getSimpleName();
+    public static final String TAG = F1FrameLayoutPainLevelSelectedFragment.class.getSimpleName();
     @BindView(R.id.f2_frame_layout_title_text)
     TextView mF2FrameLayoutTitleText;
     @BindView(R.id.f2_a_meal_btn)
@@ -31,20 +31,20 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
     RectangleView mF2DefeationBtn;
     @BindView(R.id.f2_sleep_btn)
     RectangleView mF2SleepBtn;
-    @BindView(R.id.f2_framelayout_threebox)
+    @BindView(R.id.f2_framelayout_threeitems)
     LinearLayout mF2FramelayoutThreebox;
 
-    private F2FrameLayoutPresenter mLiveEventPresenter;
+    private F1FrameLayoutPainLevelSelectedPresenter mLiveEventPresenter;
 
     @Override
     protected int getContentResource() {
-        return R.layout.f2_live_event_framelayout_fragment;
+        return R.layout.f2_framelayout_2_threeitems_fragment;
     }
 
     @Override
     protected void init(@Nullable Bundle state, View view) {
 
-        mLiveEventPresenter = F2FrameLayoutPresenter.getInstance();
+        mLiveEventPresenter = F1FrameLayoutPainLevelSelectedPresenter.getInstance();
         mLiveEventPresenter.attach(this);
     }
 

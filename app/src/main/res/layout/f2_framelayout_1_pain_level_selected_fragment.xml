@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="@string/f2_framelayout_title"
-        android:layout_above="@+id/f2_framelayout_threebox"/>
+        android:layout_above="@+id/f2_framelayout_threeitems"/>
 
     <LinearLayout
-        android:id="@id/f2_framelayout_threebox"
+        android:id="@id/f2_framelayout_threeitems"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
