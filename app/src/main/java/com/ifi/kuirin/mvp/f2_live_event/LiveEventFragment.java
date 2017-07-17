@@ -73,6 +73,7 @@ public class LiveEventFragment extends BaseFragment implements ILiveEventContrac
                         mLiveEventPresenter.itemSymptonSelect(i);
                     }
                 });
+        //Set Style DialogFragment. That will set show title bar dialog fragment
         listViewDialogFragment.setStyle(DialogFragment.STYLE_NORMAL, R.style.ListViewDialogFragment);
         CustomFragmentManager
                 .build((AppCompatActivity) getActivity())

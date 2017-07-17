@@ -56,11 +56,9 @@ public class ListViewDialogFragment extends DialogFragment {
         mTitle = getArguments().getString(KEY_TITLE);
         if (mTitle != null) {
             getDialog().setTitle(mTitle);
+        } else {
+            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         }
-//        else {
-//            getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-//        }
-
         mAdapter = new ArrayAdapter<>
                 (getContext(), android.R.layout.simple_list_item_1, mData);
         mListView = (ListView) view;
@@ -88,11 +86,6 @@ public class ListViewDialogFragment extends DialogFragment {
         if (mAdapter != null) {
             mAdapter.notifyDataSetChanged();
         }
-        return this;
-    }
-
-    public ListViewDialogFragment setTitle(String mTitle) {
-        this.mTitle = mTitle;
         return this;
     }
 }
