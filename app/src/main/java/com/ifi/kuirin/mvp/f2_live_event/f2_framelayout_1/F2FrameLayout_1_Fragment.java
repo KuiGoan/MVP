@@ -14,7 +14,6 @@ import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.dialog.ListViewDialogFragment;
 import com.ifi.kuirin.mvp.f5_pain_level.F5PainLevelActivity;
-import com.ifi.kuirin.mvp.f5_pain_level.F5PainLevelFragment;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
 
@@ -94,10 +93,6 @@ public class F2FrameLayout_1_Fragment extends BaseFragment implements IF2FrameLa
             case 2:
             case 3:
             case 4:
-//                CustomFragmentManager
-//                        .build((AppCompatActivity) getActivity())
-//                        .replaceFragment(R.id.home_framelayout,
-//                                new F5PainLevelFragment(), F5PainLevelFragment.TAG);
                 Intent intent = new Intent(getActivity(), F5PainLevelActivity.class);
                 getActivity().startActivity(intent);
                 break;

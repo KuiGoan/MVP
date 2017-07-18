@@ -11,11 +11,9 @@ import android.widget.TextView;
 
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseActivity;
-import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.adapter.RecyclerViewAdapter;
 import com.ifi.kuirin.mvp.base.model.RecyclerModel;
-import com.ifi.kuirin.mvp.f2_live_event.LiveEventActivity;
-import com.ifi.kuirin.mvp.util.CustomFragmentManager;
+import com.ifi.kuirin.mvp.f5_pain_level.f5_pain_level_selection.F5PainLevelSelectionActivity;
 import com.ifi.kuirin.mvp.util.Logger;
 
 import java.util.ArrayList;
@@ -92,8 +90,8 @@ public class F5PainLevelActivity extends BaseActivity implements IF5PainLevelCon
     public void onPainLevelItemSelected(int position) {
         Logger.d(TAG, "onPainLevelItemSelected()# pos = " + position);
 //        CustomFragmentManager.build(this).clearBackStack();
-        Intent intent = new Intent(this, LiveEventActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Intent intent = new Intent(this, F5PainLevelSelectionActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 }

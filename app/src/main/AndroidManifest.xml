@@ -25,6 +25,7 @@
         <!--<activity android:name="com.ifi.kuirin.mvp.takephoto.CameraActivity">-->
         <!--</activity>-->
         <activity android:name=".f2_live_event.LiveEventActivity"/>
+        <activity android:name=".f5_pain_level.f5_pain_level_selection.F5PainLevelSelectionActivity"/>
         <activity android:name=".f5_pain_level.F5PainLevelActivity"/>
     </application>
 

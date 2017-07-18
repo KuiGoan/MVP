@@ -39,4 +39,6 @@
     <string name="f5_pain_level_item_5">Item 5</string>
     <string name="f5_pain_level_item_6">Item 6</string>
 
+    <string name="f5_pain_level_title_selected">Pain Level Title Selected</string>
+
 </resources>

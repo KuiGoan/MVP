@@ -49,4 +49,5 @@
     <!--Using for f5_pain_level screen-->
     <item name="f5_pain_level_title" type="id"/>
     <item name="f5_pain_level_recyclerview" type="id"/>
+    <item name="f5_pain_level_selected_title" type="id"/>
 </resources>
