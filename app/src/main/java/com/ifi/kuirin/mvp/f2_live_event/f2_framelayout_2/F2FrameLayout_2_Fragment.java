@@ -20,9 +20,9 @@ import butterknife.OnClick;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayoutContract.View {
+public class F2FrameLayout_2_Fragment extends BaseFragment implements IF2FrameLayout_2_Contract.View {
 
-    public static final String TAG = F2FrameLayoutFragment.class.getSimpleName();
+    public static final String TAG = F2FrameLayout_2_Fragment.class.getSimpleName();
     @BindView(R.id.f2_frame_layout_title_text)
     TextView mF2FrameLayoutTitleText;
     @BindView(R.id.f2_a_meal_btn)
@@ -34,7 +34,7 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
     @BindView(R.id.f2_framelayout_threeitems)
     LinearLayout mF2FramelayoutThreebox;
 
-    private F2FrameLayoutPresenter mLiveEventPresenter;
+    private F2FrameLayout_2_Presenter mLiveEventPresenter;
 
     @Override
     protected int getContentResource() {
@@ -44,7 +44,7 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
     @Override
     protected void init(@Nullable Bundle state, View view) {
 
-        mLiveEventPresenter = F2FrameLayoutPresenter.getInstance();
+        mLiveEventPresenter = F2FrameLayout_2_Presenter.getInstance();
         mLiveEventPresenter.attach(this);
     }
 

@@ -6,12 +6,12 @@ import com.ifi.kuirin.mvp.base.BasePresenter;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F2FrameLayoutPresenter extends BasePresenter<IF2FrameLayoutContract.View>
-        implements IF2FrameLayoutContract.Presenter {
+public class F2FrameLayout_2_Presenter extends BasePresenter<IF2FrameLayout_2_Contract.View>
+        implements IF2FrameLayout_2_Contract.Presenter {
 
-    private static F2FrameLayoutPresenter sInstanse = new F2FrameLayoutPresenter();
+    private static F2FrameLayout_2_Presenter sInstanse = new F2FrameLayout_2_Presenter();
 
-    public static F2FrameLayoutPresenter getInstance() {
+    public static F2FrameLayout_2_Presenter getInstance() {
         return sInstanse;
     }
 

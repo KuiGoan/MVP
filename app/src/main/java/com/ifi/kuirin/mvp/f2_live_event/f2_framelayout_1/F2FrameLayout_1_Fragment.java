@@ -24,15 +24,15 @@ import butterknife.OnClick;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayoutContract.View {
+public class F2FrameLayout_1_Fragment extends BaseFragment implements IF2FrameLayout_1_Contract.View {
 
-    public static final String TAG = F2FrameLayoutFragment.class.getSimpleName();
+    public static final String TAG = F2FrameLayout_1_Fragment.class.getSimpleName();
     @BindView(R.id.f2_symptom_occurrence_text)
     TextView mF2SymptomOccurrenceText;
     @BindView(R.id.f2_symptom_occurrence_btn)
     RelativeLayout mF2SymptomOccurrenceBtn;
 
-    private F2FrameLayoutPresenter mLiveEventPresenter;
+    private F2FrameLayout_1_Presenter mLiveEventPresenter;
 
     @Override
     protected int getContentResource() {
@@ -41,7 +41,7 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
 
     @Override
     protected void init(@Nullable Bundle state, View view) {
-        mLiveEventPresenter = F2FrameLayoutPresenter.getInstance();
+        mLiveEventPresenter = F2FrameLayout_1_Presenter.getInstance();
         mLiveEventPresenter.attach(this);
     }
 
@@ -83,8 +83,12 @@ public class F2FrameLayoutFragment extends BaseFragment implements IF2FrameLayou
         Logger.d(TAG, "onSymptonSelected()# position = " + position);
         switch (position) {
             case 0:
-                break;
             case 1:
+                break;
+            case 2:
+            case 3:
+            case 4:
+
                 break;
             default:
                 break;
