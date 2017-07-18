@@ -50,7 +50,6 @@ public class F2DefecationBeginsFragment extends BaseFragment implements IF2Defec
     RectangleView mF2FramelayoutDefecatopn8;
     @BindView(R.id.f2_framelayout_eightitems)
     LinearLayout mF2FramelayoutEightitems;
-    Unbinder unbinder;
 
     private List<RecyclerModel> mData = new ArrayList<>();
     private RecyclerViewAdapter mAdapter;
@@ -70,11 +69,6 @@ public class F2DefecationBeginsFragment extends BaseFragment implements IF2Defec
 //        mLiveEventPresenter.loadData();
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 
     @OnClick({R.id.f2_framelayout_defecatopn_1, R.id.f2_framelayout_defecatopn_2, R.id.f2_framelayout_defecatopn_3, R.id.f2_framelayout_defecatopn_4, R.id.f2_framelayout_defecatopn_5, R.id.f2_framelayout_defecatopn_6, R.id.f2_framelayout_defecatopn_7, R.id.f2_framelayout_defecatopn_8})
     public void onViewClicked(View view) {
