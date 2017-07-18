@@ -16,27 +16,12 @@ public class F5FrameLayoutPainLevelSelectedPresenter extends BasePresenter<IF5Fr
     }
 
     @Override
-    public void startAMealPressed() {
-        getView().onStartAMeal();
+    public void emojiPressed() {
+        getView().onEmojiPressed();
     }
 
     @Override
-    public void endOfAMealPressed() {
-
-    }
-
-    @Override
-    public void defecationBeginsPressed() {
-        getView().onDefecationBegins();
-    }
-
-    @Override
-    public void goingToBedPressed() {
-        getView().onGoingToBed();
-    }
-
-    @Override
-    public void wakeUp() {
-
+    public void deleteBtnPressed() {
+        getView().onDeleteBtnPressed();
     }
 }

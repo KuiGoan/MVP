@@ -1,46 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@id/f5_pain_level_selected_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="@string/f5_pain_level_title_selected"/>
-    <!--android:layout_above="@+id/f2_framelayout_threeitems"-->
+        android:text="@string/f5_pain_level_selected_title"/>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:orientation="horizontal">-->
+    <TextView
+        android:id="@id/f5_pain_level_selected_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/f5_pain_level_selected_desc"
+        android:layout_below="@+id/f5_pain_level_selected_title"/>
 
-        <!--<com.ifi.kuirin.mvp.base.view.RectangleView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/bg_rectangle_a_meal_start"-->
-            <!--app:smallIcon="@mipmap/ic_launcher_round"-->
-            <!--app:text="@string/f2_start_a_meal"-->
-            <!--app:smallIconPosition="left"/>-->
+    <ImageView
+        android:id="@id/f5_pain_level_selected_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/ic_launcher_round"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/f5_pain_level_selected_desc"/>
 
-        <!--<com.ifi.kuirin.mvp.base.view.RectangleView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:layout_weight="1"-->
-            <!--app:orientation="vertical"-->
-            <!--app:smallIcon="@mipmap/ic_launcher_round"-->
-            <!--app:text="@string/f2_defecation_begins" />-->
+    <TextView
+        android:id="@id/f5_pain_level_selected_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/f5_pain_level_selected_status"
+        android:layout_below="@+id/f5_pain_level_selected_image"/>
 
-        <!--<com.ifi.kuirin.mvp.base.view.RectangleView-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="100dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:background="@drawable/bg_rectangle_a_meal_start"-->
-            <!--app:smallIconPosition="right"-->
-            <!--app:smallIcon="@mipmap/ic_launcher_round"-->
-            <!--app:text="@string/f2_going_to_bed" />-->
-    <!--</LinearLayout>-->
+    <Button
+        android:id="@id/f5_pain_level_delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/f5_pain_level_delete_btn"
+        android:layout_below="@+id/f5_pain_level_selected_status"/>
 </RelativeLayout>

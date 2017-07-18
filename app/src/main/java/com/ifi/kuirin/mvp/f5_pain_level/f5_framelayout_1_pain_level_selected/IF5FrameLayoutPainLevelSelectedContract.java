@@ -11,27 +11,15 @@ public interface IF5FrameLayoutPainLevelSelectedContract {
     // User actions. Presenter will implement
     interface Presenter extends IBasePresenter<View> {
 
-        void startAMealPressed();
+        void emojiPressed();
 
-        void endOfAMealPressed();
-
-        void defecationBeginsPressed();
-
-        void goingToBedPressed();
-
-        void wakeUp();
+        void deleteBtnPressed();
     }
 
     interface View extends IBaseView {
 
-        void onStartAMeal();
+        void onEmojiPressed();
 
-        void onEndOfTheMeal();
-
-        void onDefecationBegins();
-
-        void onGoingToBed();
-
-        void onWakeup();
+        void onDeleteBtnPressed();
     }
 }

@@ -39,6 +39,9 @@
     <string name="f5_pain_level_item_5">Item 5</string>
     <string name="f5_pain_level_item_6">Item 6</string>
 
-    <string name="f5_pain_level_title_selected">Pain Level Title Selected</string>
+    <string name="f5_pain_level_selected_title">Pain Level Title Selected</string>
+    <string name="f5_pain_level_selected_desc">desc</string>
+    <string name="f5_pain_level_selected_status">status</string>
+    <string name="f5_pain_level_delete_btn">症状消失</string>
 
 </resources>
