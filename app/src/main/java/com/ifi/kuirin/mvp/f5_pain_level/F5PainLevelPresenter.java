@@ -15,14 +15,13 @@ public class F5PainLevelPresenter extends BasePresenter<IF5PainLevelContract.Vie
         return sInstanse;
     }
 
+    @Override
+    public void loadData() {
+        getView().onLoadData();
+    }
 
-//    @Override
-//    public void loadData() {
-//        getView().onLoadData();
-//    }
-//
-//    @Override
-//    public void itemPresedenceSelect(int position) {
-//        getView().onItemPresedenceSelected(position);
-//    }
+    @Override
+    public void painLevelItemSelect(int position) {
+        getView().onPainLevelItemSelected(position);
+    }
 }

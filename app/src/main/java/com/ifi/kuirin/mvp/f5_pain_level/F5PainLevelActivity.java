@@ -1,5 +1,6 @@
 package com.ifi.kuirin.mvp.f5_pain_level;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -9,9 +10,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ifi.kuirin.mvp.R;
+import com.ifi.kuirin.mvp.base.BaseActivity;
 import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.adapter.RecyclerViewAdapter;
 import com.ifi.kuirin.mvp.base.model.RecyclerModel;
+import com.ifi.kuirin.mvp.f2_live_event.LiveEventActivity;
+import com.ifi.kuirin.mvp.util.CustomFragmentManager;
+import com.ifi.kuirin.mvp.util.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +27,9 @@ import butterknife.BindView;
  * Created by KuiRin on 7/15/2017 AD.
  */
 
-public class F5PainLevelFragment extends BaseFragment implements IF5PainLevelContract.View {
+public class F5PainLevelActivity extends BaseActivity implements IF5PainLevelContract.View {
 
-    public static final String TAG = F5PainLevelFragment.class.getSimpleName();
+    public static final String TAG = F5PainLevelActivity.class.getSimpleName();
     @BindView(R.id.f5_pain_level_title)
     TextView mF5PainLevelTitle;
     @BindView(R.id.f5_pain_level_recyclerview)
@@ -41,25 +46,30 @@ public class F5PainLevelFragment extends BaseFragment implements IF5PainLevelCon
     }
 
     @Override
-    protected void init(@Nullable Bundle state, View view) {
+    protected void init(@Nullable Bundle state) {
         mLiveEventPresenter = F5PainLevelPresenter.getInstance();
         mLiveEventPresenter.attach(this);
+        mLiveEventPresenter.loadData();
     }
 
     @Override
-    public void onDetach() {
-        super.onDetach();
+    protected void onDestroy() {
+        super.onDestroy();
         mLiveEventPresenter.detach();
     }
 
-
     @Override
     public void onLoadData() {
-        mF5Recyclerview = new RecyclerView(getContext());
-        mF5Recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
-        mF5Recyclerview.setItemAnimator(new DefaultItemAnimator());
-        mData = new ArrayList<>();
         mAdapter = new RecyclerViewAdapter(mData, R.layout.base_rectangle_view_horizontal);
+        mAdapter.setListener(new RecyclerViewAdapter.RecyclerViewListener() {
+            @Override
+            public void setOnItemClick(View view, int position) {
+                mLiveEventPresenter.painLevelItemSelect(position);
+            }
+        });
+        mF5Recyclerview.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        mF5Recyclerview.setItemAnimator(new DefaultItemAnimator());
+        mF5Recyclerview.setHasFixedSize(true);
         mF5Recyclerview.setAdapter(mAdapter);
 
         mData.add(new RecyclerModel(getString(R.string.f5_pain_level_item_1),
@@ -74,11 +84,16 @@ public class F5PainLevelFragment extends BaseFragment implements IF5PainLevelCon
                 R.mipmap.ic_launcher_round));
         mData.add(new RecyclerModel(getString(R.string.f5_pain_level_item_6),
                 R.mipmap.ic_launcher_round));
+
         mAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void onPainLevelItemSelected(int position) {
-
+        Logger.d(TAG, "onPainLevelItemSelected()# pos = " + position);
+//        CustomFragmentManager.build(this).clearBackStack();
+        Intent intent = new Intent(this, LiveEventActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }

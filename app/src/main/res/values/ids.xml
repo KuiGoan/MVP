@@ -46,5 +46,7 @@
     <!--Using for f4_pain_place screen-->
 
 
-    <!--Using for f4_pain_level screen-->
+    <!--Using for f5_pain_level screen-->
+    <item name="f5_pain_level_title" type="id"/>
+    <item name="f5_pain_level_recyclerview" type="id"/>
 </resources>

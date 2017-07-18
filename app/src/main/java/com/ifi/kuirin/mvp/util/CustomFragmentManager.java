@@ -65,6 +65,12 @@ public class CustomFragmentManager {
         fragmentManager.popBackStack();
     }
 
+    public void clearBackStack() {
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }
+
+
     public void addDialogFragment(DialogFragment dialogFragment, String tag) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         FragmentManager fm = getFragmentManager();

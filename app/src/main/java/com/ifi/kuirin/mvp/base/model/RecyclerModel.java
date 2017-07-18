@@ -21,15 +21,15 @@ public class RecyclerModel {
         return mTitle;
     }
 
-    public void setTitle(String mTitle) {
-        this.mTitle = mTitle;
+    public void setTitle(String title) {
+        this.mTitle = title;
     }
 
     public int getImageResourceId() {
         return mImageResourceId;
     }
 
-    public void setImageResourceId(int mImageResourceId) {
-        this.mImageResourceId = mImageResourceId;
+    public void setImageResourceId(int imageResourceId) {
+        this.mImageResourceId = imageResourceId;
     }
 }

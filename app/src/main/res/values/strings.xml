@@ -30,5 +30,13 @@
 
     <!--Using for f4_pain_place screen-->
 
+    <!--Using for f5_pain_level screen-->
+    <string name="f5_pain_level_title">Pain Level Title</string>
+    <string name="f5_pain_level_item_1">Item 1</string>
+    <string name="f5_pain_level_item_2">Item 2</string>
+    <string name="f5_pain_level_item_3">Item 3</string>
+    <string name="f5_pain_level_item_4">Item 4</string>
+    <string name="f5_pain_level_item_5">Item 5</string>
+    <string name="f5_pain_level_item_6">Item 6</string>
 
 </resources>

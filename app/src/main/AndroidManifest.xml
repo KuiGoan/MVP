@@ -13,15 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ifi.kuirin.mvp.HomeActivity">
+
+        <!--<activity android:name="com.ifi.kuirin.mvp.HomeActivity">-->
+        <activity android:name="com.ifi.kuirin.mvp.f1_connect_device.ConnectDeviceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.ifi.kuirin.mvp.takephoto.CameraActivity">
-        </activity>
+        <!--<activity android:name="com.ifi.kuirin.mvp.takephoto.CameraActivity">-->
+        <!--</activity>-->
+        <activity android:name=".f2_live_event.LiveEventActivity"/>
+        <activity android:name=".f5_pain_level.F5PainLevelActivity"/>
     </application>
 
 </manifest>

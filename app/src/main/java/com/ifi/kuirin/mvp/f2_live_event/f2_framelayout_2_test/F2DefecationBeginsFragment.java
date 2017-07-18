@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
-import com.ifi.kuirin.mvp.base.RecyclerViewAdapter;
+import com.ifi.kuirin.mvp.base.adapter.RecyclerViewAdapter;
 import com.ifi.kuirin.mvp.base.model.RecyclerModel;
 import com.ifi.kuirin.mvp.util.Logger;
 

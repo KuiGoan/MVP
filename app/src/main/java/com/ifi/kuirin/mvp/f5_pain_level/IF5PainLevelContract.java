@@ -11,11 +11,15 @@ public interface IF5PainLevelContract {
     // User actions. Presenter will implement
     interface Presenter extends IBasePresenter<View> {
 
-//        void loadData();
+        void loadData();
+
+        void painLevelItemSelect(int position);
     }
 
     interface View extends IBaseView {
 
-//        void onLoadData();
+        void onLoadData();
+
+        void onPainLevelItemSelected(int position);
     }
 }

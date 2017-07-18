@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.base;
+package com.ifi.kuirin.mvp.base.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,19 +16,19 @@ import java.util.List;
  * Created by KuiRin on 7/17/2017 AD.
  */
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewHolder>{
     private List<RecyclerModel> mData;
     private int mLayoutId;
     private RecyclerViewListener mListener;
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class RecyclerViewHolder extends RecyclerView.ViewHolder{
         public TextView mTitle;
         public ImageView mImageView;
 
-        public ViewHolder(View view) {
+        public RecyclerViewHolder(View view) {
             super(view);
-            mTitle = (TextView) view.findViewById(R.id.rectangle_view_text);
-            mImageView = (ImageView) view.findViewById(R.id.rectangle_view_small_icon);
+            mTitle = view.findViewById(R.id.rectangle_view_text);
+            mImageView = view.findViewById(R.id.rectangle_view_small_icon);
         }
     }
 
@@ -42,14 +42,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext())
+    public RecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext())
                 .inflate(mLayoutId, parent, false);
-        return new ViewHolder(itemView);
+        return new RecyclerViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerViewHolder holder, final int position) {
         RecyclerModel model = mData.get(position);
         holder.mTitle.setText(model.getTitle());
         holder.mImageView.setImageResource(model.getImageResourceId());

@@ -15,7 +15,7 @@ public class AlertDialogFragment extends DialogFragment {
 
     public static final String TAG = AlertDialogFragment.class.getSimpleName();
 
-    private static final String KEY_TITLE = "title";
+    private static final String KEY_TITLE = "mTitle";
 
     private static final String KEY_DESC = "desc";
 
