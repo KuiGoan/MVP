@@ -1,4 +1,4 @@
-package com.ifi.kuirin.mvp.takephoto.camera;
+package com.ifi.kuirin.mvp.base.camera;
 
 import android.content.Context;
 import android.hardware.Camera;

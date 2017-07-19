@@ -29,6 +29,7 @@
     <string name="f3_symptom_selection">症状選択</string>
 
     <!--Using for f4_pain_place screen-->
+    <string name="f4_pain_place_title">f4_pain_place_title</string>
 
     <!--Using for f5_pain_level screen-->
     <string name="f5_pain_level_title">Pain Level Title</string>

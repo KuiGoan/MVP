@@ -22,7 +22,7 @@ public class F2FrameLayout_2_Presenter extends BasePresenter<IF2FrameLayout_2_Co
 
     @Override
     public void endOfAMealPressed() {
-
+        getView().onEndOfTheMeal();
     }
 
     @Override
@@ -37,6 +37,11 @@ public class F2FrameLayout_2_Presenter extends BasePresenter<IF2FrameLayout_2_Co
 
     @Override
     public void wakeUp() {
+        getView().onWakeup();
+    }
 
+    @Override
+    public void startCamera() {
+        getView().onStartCamera();
     }
 }

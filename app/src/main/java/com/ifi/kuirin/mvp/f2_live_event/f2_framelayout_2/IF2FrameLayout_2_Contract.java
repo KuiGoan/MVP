@@ -20,6 +20,8 @@ public interface IF2FrameLayout_2_Contract {
         void goingToBedPressed();
 
         void wakeUp();
+
+        void startCamera();
     }
 
     interface View extends IBaseView {
@@ -33,5 +35,7 @@ public interface IF2FrameLayout_2_Contract {
         void onGoingToBed();
 
         void onWakeup();
+
+        void onStartCamera();
     }
 }

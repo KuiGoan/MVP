@@ -10,8 +10,10 @@ import android.widget.TextView;
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.dialog.AlertDialogFragment;
+import com.ifi.kuirin.mvp.base.dialog.CameraDialogFragment;
 import com.ifi.kuirin.mvp.base.view.RectangleView;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
+import com.ifi.kuirin.mvp.util.Logger;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -81,10 +83,17 @@ public class F2FrameLayout_2_Fragment extends BaseFragment implements IF2FrameLa
 
     @Override
     public void onStartAMeal() {
+        AlertDialogFragment alertDialogFragment = AlertDialogFragment
+                .getInstance("aaa", "bbbb")
+                .setOnClickListener(new AlertDialogFragment.AleartDiaglogOnClickListener() {
+                    @Override
+                    public void onClickNeutralButton() {
+                        mLiveEventPresenter.startCamera();
+                    }
+                });
         CustomFragmentManager
                 .build((AppCompatActivity) getActivity())
-                .addDialogFragment(AlertDialogFragment
-                        .getInstance("aaa", "bbbb"), AlertDialogFragment.TAG);
+                .addDialogFragment(alertDialogFragment, AlertDialogFragment.TAG);
     }
 
     @Override
@@ -105,5 +114,24 @@ public class F2FrameLayout_2_Fragment extends BaseFragment implements IF2FrameLa
     @Override
     public void onWakeup() {
 
+    }
+
+    @Override
+    public void onStartCamera() {
+        CameraDialogFragment cameraDialogFragment = new CameraDialogFragment()
+                .setCameraListener(new CameraDialogFragment.CameraListener() {
+            @Override
+            public void onTakePhotoFinish() {
+                Logger.d(TAG, "onTakePhotoFinish");
+            }
+
+            @Override
+            public void onTakePhotoFailed() {
+                Logger.d(TAG, "onTakePhotoFailed");
+            }
+        });
+        CustomFragmentManager
+                .build((AppCompatActivity) getActivity())
+                .addDialogFragment(cameraDialogFragment, CameraDialogFragment.TAG);
     }
 }

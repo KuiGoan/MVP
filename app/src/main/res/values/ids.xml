@@ -8,6 +8,10 @@
     <!--Using for base_recycler_dialog_fragment-->
     <item name="dialog_recycler_view" type="id"/>
 
+    <!--Using for base camera-->
+    <item name="camera_review" type="id"/>
+    <item name="camera_capture_button" type="id"/>
+
     <!--F1_connect_device screen-->
     <item name="f1_connect_btn" type="id"/>
 
@@ -44,7 +48,16 @@
 
 
     <!--Using for f4_pain_place screen-->
-
+    <item name="f4_pain_level_title" type="id"/>
+    <item name="f4_pain_level_position_1" type="id"/>
+    <item name="f4_pain_level_position_2" type="id"/>
+    <item name="f4_pain_level_position_3" type="id"/>
+    <item name="f4_pain_level_position_4" type="id"/>
+    <item name="f4_pain_level_position_5" type="id"/>
+    <item name="f4_pain_level_position_6" type="id"/>
+    <item name="f4_pain_level_position_7" type="id"/>
+    <item name="f4_pain_level_position_8" type="id"/>
+    <item name="f4_pain_level_position_9" type="id"/>
 
     <!--Using for f5_pain_level screen-->
     <item name="f5_pain_level_title" type="id"/>

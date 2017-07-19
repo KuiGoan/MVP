@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseActivity;
 import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_1.F2FrameLayout_1_Fragment;
-import com.ifi.kuirin.mvp.f5_pain_level.f5_framelayout_1_pain_level_selected.F5FrameLayoutPainLevelSelectedFragment;
 import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2.F2FrameLayout_2_Fragment;
 import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_defecation_begins.F2DefecationBeginsFragment;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
@@ -32,10 +31,10 @@ public class LiveEventActivity extends BaseActivity implements ILiveEventContrac
         mLiveEventPresenter = LiveEventPresenter.getInstance();
         mLiveEventPresenter.attach(this);
 
-        //init framelayout 1
+        //init framelayout 1: alway set false
         mLiveEventPresenter.checkPainLevelHasSelected(false);
 
-        //init framelayout 2
+        //init framelayout 2: can set true or false
         mLiveEventPresenter.checkDefecationHasSelected(false);
     }
 
@@ -68,9 +67,9 @@ public class LiveEventActivity extends BaseActivity implements ILiveEventContrac
 
     @Override
     public void onPainLevelHasSelected() {
-        CustomFragmentManager.build(this)
-                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_1,
-                        new F5FrameLayoutPainLevelSelectedFragment(),
-                        F5FrameLayoutPainLevelSelectedFragment.TAG);
+//        CustomFragmentManager.build(this)
+//                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_1,
+//                        new F5FrameLayoutPainLevelSelectedFragment(),
+//                        F5FrameLayoutPainLevelSelectedFragment.TAG);
     }
 }

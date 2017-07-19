@@ -67,7 +67,7 @@ public class F5FrameLayoutPainLevelSelectedFragment extends BaseFragment impleme
 
     @Override
     public void onEmojiPressed() {
-
+        getActivity().finish();
     }
 
     @Override

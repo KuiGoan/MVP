@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.ifi.kuirin.mvp.R;
 import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.dialog.ListViewDialogFragment;
+import com.ifi.kuirin.mvp.f4_pain_place.F4PainPlaceActivity;
 import com.ifi.kuirin.mvp.f5_pain_level.F5PainLevelActivity;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
@@ -86,14 +87,17 @@ public class F2FrameLayout_1_Fragment extends BaseFragment implements IF2FrameLa
     @Override
     public void onSymptonSelected(int position) {
         Logger.d(TAG, "onSymptonSelected()# position = " + position);
+        Intent intent;
         switch (position) {
             case 0:
             case 1:
+                intent = new Intent(getActivity(), F4PainPlaceActivity.class);
+                getActivity().startActivity(intent);
                 break;
             case 2:
             case 3:
             case 4:
-                Intent intent = new Intent(getActivity(), F5PainLevelActivity.class);
+                intent = new Intent(getActivity(), F5PainLevelActivity.class);
                 getActivity().startActivity(intent);
                 break;
             default:
