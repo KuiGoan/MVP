@@ -15,6 +15,11 @@ public class F2DefecationBeginsPresenter extends BasePresenter<IF2DefecationBegi
         return sInstanse;
     }
 
+    @Override
+    public void clickItem(int position) {
+        getView().onClickItem(position);
+    }
+
 
 //    @Override
 //    public void loadData() {

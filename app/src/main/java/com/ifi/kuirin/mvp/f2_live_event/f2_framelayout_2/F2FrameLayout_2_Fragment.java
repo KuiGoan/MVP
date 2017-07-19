@@ -12,6 +12,7 @@ import com.ifi.kuirin.mvp.base.BaseFragment;
 import com.ifi.kuirin.mvp.base.dialog.AlertDialogFragment;
 import com.ifi.kuirin.mvp.base.dialog.CameraDialogFragment;
 import com.ifi.kuirin.mvp.base.view.RectangleView;
+import com.ifi.kuirin.mvp.f2_live_event.f2_framelayout_2_defecation_begins.F2DefecationBeginsFragment;
 import com.ifi.kuirin.mvp.util.CustomFragmentManager;
 import com.ifi.kuirin.mvp.util.Logger;
 
@@ -103,7 +104,9 @@ public class F2FrameLayout_2_Fragment extends BaseFragment implements IF2FrameLa
 
     @Override
     public void onDefecationBegins() {
-
+        CustomFragmentManager.build((AppCompatActivity) getActivity())
+                .replaceFragmentNonAddStack(R.id.f2_live_event_framelayout_2,
+                        new F2DefecationBeginsFragment(), F2DefecationBeginsFragment.TAG);
     }
 
     @Override

@@ -12,10 +12,12 @@ public interface IF2DefecationBeginsContract {
     interface Presenter extends IBasePresenter<View> {
 
 //        void loadData();
+        void clickItem(int position);
     }
 
     interface View extends IBaseView {
 
 //        void onLoadData();
+        void onClickItem(int position);
     }
 }
